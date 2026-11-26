@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#100d20">
+<title>Para Ana Carolina 💜</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+*{box-sizing:border-box}
+body{
+ margin:0;background:radial-gradient(ellipse at top,#42266c,transparent 60%),#100d20;
+ color:#fff;font-family:'DM Sans',sans-serif;text-align:center
+}
+section{min-height:100vh;padding:35px 20px;display:flex;align-items:center;justify-content:center}
+.wrap{max-width:650px;width:100%;margin:auto}
+h1{font:700 clamp(40px,10vw,65px) 'Playfair Display';line-height:1.15}
+h2{font:700 35px 'Playfair Display'}
+.gradient{background:linear-gradient(90deg,#d7baff,#a9dcff);color:transparent;background-clip:text}
+p{line-height:1.9;color:#e4dcef}
+.heart{font-size:55px;animation:pulse 1.5s infinite}
+@keyframes pulse{50%{transform:scale(1.15)}}
+button{border:0;border-radius:40px;padding:15px 25px;font-weight:bold;font-size:15px;cursor:pointer}
+.primary{background:linear-gradient(90deg,#c9aaff,#a9dcff);color:#17112e}
+.secondary{background:#ffffff15;color:white;border:1px solid #ffffff30}
+.card{padding:25px;background:#ffffff10;border:1px solid #ffffff25;border-radius:22px;text-align:left}
+.card p{margin-bottom:18px}
+.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:25px}
+.eyebrow{color:#a9dcff;letter-spacing:3px;font-size:11px;font-weight:bold}
+#no{position:relative}
+#final{display:none}
+#final.show{display:block}
+#status{font-size:13px;color:#bca9e9}
+#admin{padding:35px 18px;background:#0c0917}
+.adminbox{max-width:480px;margin:auto;background:#ffffff10;border:1px solid #ffffff25;padding:24px;border-radius:20px}
+input{width:100%;padding:14px;margin:8px 0;background:#17112e;color:white;border:1px solid #ffffff30;border-radius:10px}
+.hidden{display:none!important}
+</style>
+</head>
+<body>
+
+<section>
+<div class="wrap">
+<div class="heart">💜</div>
+<div class="eyebrow">UMA SURPRESA FEITA COM CARINHO</div>
+<h1>Para você,<br><span class="gradient">Ana Carolina</span></h1>
+<p>Às vezes, duas pessoas começam uma conversa sem imaginar o quanto ela pode deixar o dia mais bonito. Essa surpresa é sobre o que começou entre nós.</p>
+<button class="primary" onclick="go('historia')">Abrir minha surpresa ✨</button>
+</div>
+</section>
+
+<section id="historia">
+<div class="wrap">
+<div class="eyebrow">DESDE AQUELA PRIMEIRA CONVERSA</div>
+<h2>Tem encontros que chegam de mansinho…</h2>
+<div class="card">
+<p>Ana Carolina, a gente se conhece há pouquíssimo tempo — só dois dias —, mas desde que começamos a conversar, aconteceu algo muito bom. É um sentimento que eu ainda nem sei explicar direito.</p>
+
+<p>Cada conversa, cada momento em que vamos nos conhecendo, cada troca de pensamentos e cada assunto sobre a vida fazem tudo ficar mais especial. E, sem eu perceber, você foi se tornando uma parte muito bonita do meu dia a dia… rápido até demais, né? 💙</p>
+
+<p>Não quero apressar nada, nem fingir que já conheço todos os seus capítulos. Quero conhecer cada um deles, respeitar seu tempo, descobrir seus sonhos, suas manias, suas alegrias e também estar por perto nos dias difíceis.</p>
+
+<p>O que eu quero é <b>conquistar você aos poucos</b>, com carinho, sinceridade, atitudes e cuidado. Quero que cada novo dia seja uma oportunidade de mostrar que minha intenção é de verdade.</p>
+
+<p>E se a vida permitir que esse sentimento cresça, eu sonho com muita coisa bonita: nós dois construindo uma história, um apoiando o outro, realizando planos, tendo nosso cantinho, nossa família e colocando Deus à frente de tudo.</p>
+
+<p>Por enquanto, só queria que você soubesse: conhecer você foi uma surpresa muito boa. Obrigado por esses momentos. 💜</p>
+</div>
+<div class="actions">
+<button class="primary" onclick="go('pedido')">Ver a pergunta 💗</button>
+</div>
+</div>
+</section>
+
+<section id="pedido">
+<div class="wrap" id="question">
+<div class="heart">🩵</div>
+<div class="eyebrow">UMA PERGUNTA COM TODO MEU CARINHO</div>
+<h1>Ana Carolina,<br><span class="gradient">você aceita namorar comigo?</span></h1>
+<p>Quero viver essa história com você, um dia de cada vez, com respeito, cuidado, parceria e Deus guiando nossos passos.</p>
+<div class="actions">
+<button class="primary" onclick="accept()">SIM! 💜</button>
+<button class="secondary" id="no" onmouseenter="dodge()" ontouchstart="dodge()">Não 🙈</button>
+</div>
+<p>O que importa é que sua resposta seja de verdade. 💙</p>
+<div id="status"></div>
+</div>
+
+<div class="wrap" id="final">
+<div class="heart">💜</div>
+<h2>Você deixou meu dia mais feliz!</h2>
+<p>Que esse seja o começo de uma história linda, construída com calma, respeito, carinho e muitos motivos para sorrir.</p>
+<p>Quero continuar conhecendo você e fazendo dar certo, um dia de cada vez.</p>
+<h3 class="gradient">Com carinho, de alguém muito feliz por ter conhecido você. 🩵</h3>
+</div>
+</section>
+
+<section id="admin">
+<div class="adminbox">
+<div class="eyebrow">ÁREA PRIVADA</div>
+<h2>Painel do Fundador 🔐</h2>
+<p>Entre com seu e-mail e senha para consultar a resposta.</p>
+<div id="login">
+<input id="email" type="email" placeholder="Seu e-mail">
+<input id="password" type="password" placeholder="Sua senha">
+<button class="primary" onclick="login()">Entrar no painel</button>
+</div>
+<div id="result" class="hidden"></div>
+<button id="refresh" class="secondary hidden" onclick="readAnswer()">Atualizar resposta</button>
+<p id="adminStatus"></p>
+</div>
+</section>
+
+<script type="module">
+import {initializeApp} from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+import {getFirestore,doc,setDoc,getDoc,serverTimestamp} from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
+import {getAuth,signInWithEmailAndPassword,onAuthStateChanged} from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
+
+const firebaseConfig={
+ apiKey:"AIzaSyDmdUJdUcvWJRUuIMUNoc5sVpZWWzCw344",
+ authDomain:"supresa-ana.firebaseapp.com",
+ projectId:"supresa-ana",
+ storageBucket:"supresa-ana.firebasestorage.app",
+ messagingSenderId:"498052519155",
+ appId:"1:498052519155:web:262c5703b18b23eff4d386"
+};
+
+const app=initializeApp(firebaseConfig);
+const db=getFirestore(app);
+const auth=getAuth(app);
+
+window.go=(id)=>document.getElementById(id).scrollIntoView({behavior:"smooth"});
+
+window.dodge=()=>{
+ const b=document.getElementById("no");
+ const x=(Math.random()-.5)*Math.min(230,innerWidth*.5);
+ const y=(Math.random()-.5)*90;
+ b.style.transform=`translate(${x}px,${y}px)`;
+ b.textContent="Tem certeza? 🙈";
+};
+
+window.accept=async()=>{
+ document.getElementById("question").classList.add("hidden");
+ document.getElementById("final").classList.add("show");
+ const status=document.getElementById("status");
+ status.textContent="Enviando sua resposta...";
+
+ try{
+  await setDoc(doc(db,"surpresa_ana","resposta"),{
+   nome:"Ana Carolina da Silva Fagundes",
+   resposta:"SIM",
+   criadoEm:serverTimestamp()
+  });
+  status.textContent="Resposta enviada com carinho! 💜";
+ }catch(error){
+  console.error(error);
+  status.textContent="Não foi possível registrar a resposta. Tente novamente mais tarde.";
+ }
+ for(let i=0;i<25;i++){
+  const h=document.createElement("div");
+  h.textContent=["💜","🩵","✨","💗"][i%4];
+  h.style.cssText=`position:fixed;left:${Math.random()*100}vw;top:100vh;font-size:25px;z-index:9;pointer-events:none;animation:rise 4s linear forwards`;
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),4500);
+ }
+};
+
+window.login=async()=>{
+ const msg=document.getElementById("adminStatus");
+ msg.textContent="";
+ try{
+  await signInWithEmailAndPassword(auth,
+   document.getElementById("email").value.trim(),
+   document.getElementById("password").value);
+  document.getElementById("login").classList.add("hidden");
+  document.getElementById("refresh").classList.remove("hidden");
+  await readAnswer();
+ }catch(e){
+  msg.textContent="E-mail ou senha incorretos, ou acesso não autorizado.";
+ }
+};
+
+window.readAnswer=async()=>{
+ const out=document.getElementById("result");
+ out.classList.remove("hidden");
+ out.textContent="Consultando...";
+ try{
+  const snap=await getDoc(doc(db,"surpresa_ana","resposta"));
+  if(!snap.exists()){
+   out.textContent="Ainda não recebemos uma resposta.";
+   return;
+  }
+  const data=snap.data();
+  const date=data.criadoEm?.toDate();
+  out.innerHTML=`<h3>Resposta recebida: ${data.resposta} 💜</h3>
+  Nome: Ana Carolina da Silva Fagundes<br>
+  Data: ${date?date.toLocaleDateString("pt-BR"):"Aguardando"}<br>
+  Horário: ${date?date.toLocaleTimeString("pt-BR"):"Aguardando"}`;
+ }catch(e){
+  out.textContent="Não foi possível consultar. Confira as regras do Firestore.";
+ }
+};
+
+onAuthStateChanged(auth,user=>{
+ if(user && user.email==="Souzafernando2703@gmail.com"){
+  document.getElementById("login").classList.add("hidden");
+  document.getElementById("refresh").classList.remove("hidden");
+  readAnswer();
+ }
+});
+</script>
+
+<style>
+@keyframes rise{to{transform:translateY(-120vh) rotate(360deg);opacity:0}}
+</style>
+</body>
+</html>
